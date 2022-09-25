@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.controllers.AddFormController">
+   <children>
+      <Label fx:id="partLabel" layoutX="127.0" layoutY="86.0" prefHeight="28.0" prefWidth="84.0" text="Add Part" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radioHouse" layoutX="301.0" layoutY="85.0" mnemonicParsing="false" onAction="#houseAction" selected="true" text="In-House">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioOuts" layoutX="475.0" layoutY="85.0" mnemonicParsing="false" onAction="#outSelection" text="Outsourced">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="138.0" layoutY="251.0" text="ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partID" layoutX="249.0" layoutY="248.0" onAction="#setID" prefHeight="26.0" prefWidth="178.0" promptText="auto gen disabled">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="nameLabel" layoutX="138.0" layoutY="305.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="249.0" layoutY="304.0" onAction="#setName" prefHeight="26.0" prefWidth="178.0" promptText="exampe Brakes, tires">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="Inventory" layoutX="138.0" layoutY="365.0" text="Inventory">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inventory" layoutX="249.0" layoutY="364.0" onAction="#setStock" prefHeight="26.0" prefWidth="178.0" promptText="How many? example 15">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="priceLabel" layoutX="138.0" layoutY="423.0" text="Price/Cost">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="price" layoutX="249.0" layoutY="422.0" onAction="#setPrice" prefHeight="26.0" prefWidth="178.0" promptText="12.99, etc">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="maxLabel" layoutX="138.0" layoutY="480.0" text="Max">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="max" layoutX="249.0" layoutY="479.0" onAction="#setMax" prefHeight="26.0" prefWidth="178.0" />
+      <Label fx:id="minLabel1" layoutX="500.0" layoutY="480.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="min" layoutX="564.0" layoutY="479.0" onAction="#setMin" prefHeight="26.0" prefWidth="189.0" />
+      <Label fx:id="priceLabel1" layoutX="138.0" layoutY="538.0" text="Machine ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="machineID" layoutX="249.0" layoutY="537.0" onAction="#setMachineID" prefHeight="26.0" prefWidth="178.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="compNameLabel" layoutX="138.0" layoutY="538.0" text="Company Name" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="comapnyNameID" layoutX="249.0" layoutY="537.0" onAction="#setCompanyName" prefHeight="26.0" prefWidth="178.0" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="savePartBut" layoutX="448.0" layoutY="607.0" mnemonicParsing="false" onAction="#onSaveButtonPart" prefHeight="37.0" prefWidth="115.0" text="Save" />
+      <Button fx:id="cancelPart" layoutX="601.0" layoutY="607.0" mnemonicParsing="false" onAction="#onCancelPress" prefHeight="37.0" prefWidth="115.0" text="Cancel" />
+   </children>
+</AnchorPane>
