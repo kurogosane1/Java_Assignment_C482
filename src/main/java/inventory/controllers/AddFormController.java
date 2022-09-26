@@ -1,14 +1,19 @@
 package inventory.controllers;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class AddFormController implements Initializable{
     
@@ -131,12 +136,21 @@ public class AddFormController implements Initializable{
     void setStock(ActionEvent event) {
 
     }
-
+    
+    public void onCancelClick() throws IOException {
+        System.out.println("Cencel button was pressed");
+         Parent root = FXMLLoader.load(getClass().getResource("/inventory/MainScreen.fxml"));
+         Stage stage = (Stage) cancelPart.getScene().getWindow();
+         stage.setTitle("Main Screen");
+         System.out.println("This was cancelled");
+         stage.setScene(new Scene(root));
+         stage.show();
+    }
     /* (non-Javadoc)
      * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("I am initialized");
+        // System.out.println("I am initialized");
     }
 }
