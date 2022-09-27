@@ -3,7 +3,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -76,21 +77,33 @@ public class MainScreenController implements Initializable{
     private TextField productsSearch;
 
     // This will close the application
-    public void onActionClick() {
+    public void onActionClick(ActionEvent event) {
         Stage stage = (Stage) mainExit.getScene().getWindow();
         stage.close();
 
     }
     // This will switch stage
     public void switchtoAddForm() throws IOException {
-         System.out.println("This was clicked");
-         Parent root = FXMLLoader.load(getClass().getResource("/inventory/AddPart.fxml"));
+        System.out.println("This was clicked");
+        Parent root = FXMLLoader.load(getClass().getResource("/inventory/AddPart.fxml"));
         //  System.out.println(getClass().getResource("/inventory/AddPart.fxml"));
-         Stage stage = (Stage) addPartsButtonM.getScene().getWindow();
-          stage.setTitle("Add Parts");
+        Stage stage = (Stage) addPartsButtonM.getScene().getWindow();
+        stage.setTitle("Add Parts");
         // System.out.println("This was clicked " + root);
-         stage.setScene(new Scene(root));
-         stage.show();
+        stage.setScene(new Scene(root));
+        stage.show();
+        // App.setRoot("AddPart");
+    }
+    
+    public void switchModForm() throws IOException {
+        System.out.println("This was clicked");
+        Parent root = FXMLLoader.load(getClass().getResource("/inventory/ModifyParts.fxml"));
+        //  System.out.println(getClass().getResource("/inventory/AddPart.fxml"));
+        Stage stage = (Stage) addPartsButtonM.getScene().getWindow();
+        stage.setTitle("Modify Parts");
+        // System.out.println("This was clicked " + root);
+        stage.setScene(new Scene(root));
+        stage.show();
         // App.setRoot("AddPart");
     }
 
@@ -98,6 +111,8 @@ public class MainScreenController implements Initializable{
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
         System.out.println("The main screen has been intialized");
+        mainExit.setOnAction(this::onActionClick);
+        // addPartsButtonM.setOnAction(switchtoAddForm);
 
         // addPartsButtonM.onAction(this::switchtoAddForm);
         
