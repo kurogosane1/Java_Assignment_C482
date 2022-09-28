@@ -46,8 +46,8 @@
       <Button fx:id="addPartsButtonM" layoutX="329.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Add" onAction="#switchtoAddForm"/>
       <Button fx:id="modifyPartsButtonM1" layoutX="400.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Modify" onAction="#switchModForm"/>
       <Button fx:id="deletePartsButtonM" layoutX="492.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Delete" />
-      <Button fx:id="addProductsMain" layoutX="899.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Add" />
-      <Button fx:id="modifyProdMain" layoutX="970.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Modify" />
+      <Button fx:id="addProductsMain" layoutX="899.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Add" onAction="#toAddProd"/>
+      <Button fx:id="modifyProdMain" layoutX="970.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Modify" onAction="#toModProd"/>
       <Button fx:id="deleteProdMain" layoutX="1062.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Delete" />
       <Button fx:id="mainExit" layoutX="1064.0" layoutY="601.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Exit" />
    </children>

@@ -4,7 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,25 +19,7 @@ import javafx.stage.Stage;
 public class MainScreenController implements Initializable{
     
     @FXML
-    private Button addPartsButtonM;
-
-    @FXML
-    private Button addProductsMain;
-
-    @FXML
-    private Button deletePartsButtonM;
-
-    @FXML
-    private Button deleteProdMain;
-
-    @FXML
-    private Button mainExit;
-
-    @FXML
-    private Button modifyPartsButtonM1;
-
-    @FXML
-    private Button modifyProdMain;
+    private Button addPartsButtonM, addProductsMain,deletePartsButtonM,deleteProdMain, mainExit, modifyPartsButtonM1, modifyProdMain;
 
     @FXML
     private TableColumn<?, ?> partInvLevel;
@@ -98,13 +79,30 @@ public class MainScreenController implements Initializable{
     public void switchModForm() throws IOException {
         System.out.println("This was clicked");
         Parent root = FXMLLoader.load(getClass().getResource("/inventory/ModifyParts.fxml"));
-        //  System.out.println(getClass().getResource("/inventory/AddPart.fxml"));
-        Stage stage = (Stage) addPartsButtonM.getScene().getWindow();
+        Stage stage = (Stage) modifyPartsButtonM1.getScene().getWindow();
         stage.setTitle("Modify Parts");
-        // System.out.println("This was clicked " + root);
         stage.setScene(new Scene(root));
         stage.show();
-        // App.setRoot("AddPart");
+
+    }
+
+    // This will take to add products page
+    public void toAddProd() throws IOException {
+        System.out.println("This was clicked");
+        Parent root = FXMLLoader.load(getClass().getResource("/inventory/AddProduct.fxml"));
+        Stage stage = (Stage) addProductsMain.getScene().getWindow();
+        stage.setTitle("Add Products");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void toModProd() throws IOException {
+        System.out.println("This was clicked");
+        Parent root = FXMLLoader.load(getClass().getResource("/inventory/ModProduct.fxml"));
+        Stage stage = (Stage) addProductsMain.getScene().getWindow();
+        stage.setTitle("Add Products");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @Override
@@ -112,10 +110,7 @@ public class MainScreenController implements Initializable{
         // TODO Auto-generated method stub
         System.out.println("The main screen has been intialized");
         mainExit.setOnAction(this::onActionClick);
-        // addPartsButtonM.setOnAction(switchtoAddForm);
-
-        // addPartsButtonM.onAction(this::switchtoAddForm);
-        
+              
     }
 
     
