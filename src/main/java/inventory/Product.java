@@ -1,6 +1,7 @@
 package inventory;
 
 public class Product{
+ObservableList<Part> associatedParts= FXCollections.ObservableArrayList();
 int id;
 String name;
 double price;
@@ -61,6 +62,15 @@ public int getMin(){
 }
 public int min(){
     return max;
+}
+public void addAssociatedPart(Part part){
+
+}
+public boolean deleteAssociatedPart(Part selectedAssociatedPart){
+
+}
+public ObservableList<Part> getAllAssociatedPart(){
+    return associatedParts;
 }
 
 
