@@ -1,7 +1,10 @@
 package inventory;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Product{
-ObservableList<Part> associatedParts= FXCollections.ObservableArrayList();
+ObservableList<Part> associatedParts= FXCollections.observableArrayList();
 int id;
 String name;
 double price;
@@ -45,7 +48,7 @@ public void setMax(int max){
 /*
  * Getters
  */
-public id getId(){
+public int getId(){
     return id;
 }
 public String getName(){
@@ -67,7 +70,7 @@ public void addAssociatedPart(Part part){
 
 }
 public boolean deleteAssociatedPart(Part selectedAssociatedPart){
-
+    return false;
 }
 public ObservableList<Part> getAllAssociatedPart(){
     return associatedParts;
