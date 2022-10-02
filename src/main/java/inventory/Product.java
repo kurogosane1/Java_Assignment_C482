@@ -5,11 +5,10 @@ import javafx.collections.ObservableList;
 
 public class Product{
 ObservableList<Part> associatedParts= FXCollections.observableArrayList();
-int id;
+int id, min, max, stock;
 String name;
 double price;
-int stock;
-int min, max;
+
 
 /** Construct*/
 Product(int id, String name, double price, int stock, int min)
@@ -63,11 +62,11 @@ public int getStock(){
 public int getMin(){
     return min;
 }
-public int min(){
+public int getMax(){
     return max;
 }
 public void addAssociatedPart(Part part){
-
+    
 }
 public boolean deleteAssociatedPart(Part selectedAssociatedPart){
     return false;
