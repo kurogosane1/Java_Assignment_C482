@@ -11,7 +11,7 @@ double price;
 
 
 /** Construct*/
-Product(int id, String name, double price, int stock, int min)
+Product(int id, String name, double price, int stock, int min, int max)
 {
     this.id = id;
     this.name = name;
