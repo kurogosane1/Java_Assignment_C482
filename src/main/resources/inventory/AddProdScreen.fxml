@@ -10,13 +10,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.controllers.ModProdController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.controllers.AddProdController">
    <children>
       <Pane layoutX="26.0" layoutY="20.0" prefHeight="594.0" prefWidth="1148.0" style="-fx-border-width: 3; -fx-border-style: solid; -fx-border-radius: 15;">
          <children>
             <Group layoutX="50.0" layoutY="53.0">
                <children>
-                  <Label fx:id="prodLabel" text="Modify Product">
+                  <Label fx:id="prodLabel" text="Add Product">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -41,12 +42,12 @@
             </Group>
             <TextField fx:id="searchTF" layoutX="953.0" layoutY="41.0" promptText="Search by Part ID or Name" />
             <TableView fx:id="PartTable" layoutX="647.0" layoutY="76.0" prefHeight="181.0" prefWidth="467.0">
-               <columns>
-                  <TableColumn fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
-                  <TableColumn fx:id="partNameColumn" prefWidth="150.0" text="Part Name" />
+              <columns>
+                <TableColumn fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="partNameColumn" prefWidth="150.0" text="Part Name" />
                   <TableColumn fx:id="partInvColumn" prefWidth="105.0" text="Inventory Level" />
                   <TableColumn fx:id="partPriceColumn" prefWidth="136.0" text="Price/ Cost per Unit" />
-               </columns>
+              </columns>
             </TableView>
             <TableView fx:id="AssociatedTable" layoutX="647.0" layoutY="307.0" prefHeight="181.0" prefWidth="467.0">
                <columns>
